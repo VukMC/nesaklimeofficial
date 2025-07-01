@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="success-circle">
+        <div class="checkmark">✓</div>
+    </div>
+    
+    <h1>Uspešna porudžbina!</h1>
+    
+    <p>Uspešno ste kreirali porudžbinu, ubrzo ćemo Vas kontaktirati za dogovor oko termina i izlaska na teren!</p>
+    
+    <div class="btn-container">
+        <a href="/"><button class="btn">Nazad na početnu</button></a>
+    </div>
+</div>
+
+<script>
+    // Add animation to the checkmark on load
+    document.addEventListener('DOMContentLoaded', function() {
+        const circle = document.querySelector('.success-circle');
+        circle.style.animation = 'pulse 1.5s ease-in-out';
+        
+        // Button hover effects
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                btn.style.transform = 'translateY(-3px)';
+            });
+            
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translateY(0)';
+            });
+        });
+    });
+</script>
